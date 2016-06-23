@@ -4,13 +4,15 @@
 // App Shared Variables
 // --------------------------------------------------
 // Shared Sass variables go in the app.variables.scss file
-@import "app.variables";
+@import 'app.variables';
 
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+// Used to show the status bar for component demos
+$cordova-ios-statusbar-padding:           31px;
 
 // Ionic Windows Sass
 // --------------------------------------------------
@@ -23,9 +25,24 @@
 // --------------------------------------------------
 // All Sass files that make up this app goes into the app.core.scss file.
 // For simpler CSS overrides, custom app CSS must come after Ionic's CSS.
-@import "app.core";
+@import 'app.core';
 
 
 // App Windows Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Windows app
+
+@import "../pages/popovers/basic/styles.wp";
+
+// Windows Status Bar
+// ----------------------------
+img#wp-only {
+  display: block !important;
+  position: absolute;
+  background-color: transparent;
+  padding: 5px 0;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
